@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Header from '../components/Header.astro';
+
+import "@fontsource/amatic-sc"
+---
+
+<Layout title="Grupo Tateti">
+	<main>
+		<Navbar />
+		<Header />
+	</main>
+</Layout>
+
+<style>
+	h1 {
+		font-family: "Amatic SC";
+		font-size: 3rem;
+		font-weight: 700;
+		margin-block: 1rem;
+	}
+</style>
