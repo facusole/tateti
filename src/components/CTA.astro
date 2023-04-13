@@ -1,0 +1,26 @@
+---
+
+---
+
+<button>Quiero donar</button>
+<style>
+    button {
+        font-family: "Amatic SC", serif;
+		font-weight: 700;
+        font-size: 2rem;
+        color: var(--white);
+
+        background-color: var(--purple-500);
+        padding: .5rem 1.5rem;
+        border: transparent;
+        border-radius: .75rem;
+        cursor: pointer;
+
+        transition: .3s ease-in;
+    }
+
+    button:is(:focus-within, :hover) {
+        background-color: var(--purple-700);
+        outline: 1px solid var(--purple-500);
+    }
+</style>
