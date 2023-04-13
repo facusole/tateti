@@ -1,0 +1,29 @@
+---
+const {stat} = Astro.props
+const {statName} = Astro.props
+---
+
+<div>
+	<p>{stat}</p>
+	<h3>{statName}</h3>
+</div>
+
+<style>
+	div {
+		font-family: "Poppins";
+		text-align: center;
+	}
+
+	p {
+		font-size: 2rem;
+		font-weight: 600;
+		color: var(--purple-700);
+	}
+
+	h3 {
+		font-size: 1.5rem;
+		font-weight: 400;
+		color: var(--purple-700);
+		text-transform: lowercase;
+	}
+</style>
