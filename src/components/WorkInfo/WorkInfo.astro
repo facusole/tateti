@@ -1,0 +1,45 @@
+---
+import children1 from '../../assets/children-1.webp'
+import children2 from '../../assets/children-2.webp'
+import children3 from '../../assets/children-3.webp'
+
+---
+
+<section class="pd__inline">
+    <h2>Trabajamos en busca de la equidad social</h2>
+    <p>Abordamos temáticas en relación con la <span>alimentación, salud, infraestructura, acceso al agua potable y perspectiva de género.</span></p>
+    <div>
+        <article><img src={children1} alt=""></article>
+        <article><img src={children2} alt=""></article>
+        <article><img src={children3} alt=""></article>
+    </div>
+</section>
+
+<style>
+    h2 {
+        font-family: "Amatic SC", serif;
+		font-weight: 700;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    p {
+        font-family: "Poppins", sans-serif;
+        font-size: 1rem;
+        width: 30ch;
+    }
+
+    span {
+        font-weight: 700;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    article:nth-child(even) {
+        align-self: flex-end;
+    }
+</style>
