@@ -11,9 +11,11 @@ import Footer from '../components/Footer/Footer.astro';
 ---
 
 <Layout title="Grupo Tateti">
-	<main>
+	<header>
 		<Navbar />
 		<Header />
+	</header>
+	<main>
 		<InfoBanner />
 		<WorkInfo />
 		<MainCTA />
@@ -24,5 +26,12 @@ import Footer from '../components/Footer/Footer.astro';
 </Layout>
 
 <style>
+	header {
+		background-color: var(--purple-300);
+	}
 
+	main {
+		background-color: var(--purple-200);
+		padding-block: 2rem;
+	}
 </style>
