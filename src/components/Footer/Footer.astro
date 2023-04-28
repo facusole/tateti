@@ -20,6 +20,7 @@ import Logo from '../../assets/Logo.webp'
         padding-bottom: 4rem;
         background-color: var(--purple-200);
         position: relative;
+        overflow-x: hidden;
     }
 
     section::before {
@@ -38,7 +39,8 @@ import Logo from '../../assets/Logo.webp'
         width: 5rem;
         height: 4rem;
         position: relative;
-        transform: translateY(-2rem);
+        z-index: 5;
+        transform: translateY(1rem);
     }
 
     p {
