@@ -3,19 +3,21 @@ import "@fontsource/poppins"
 import CTA from "../CTA.astro";
 ---
 
-<header class="pd__inline">
+<section class="pd__inline">
     <div>
         <h1>Transformamos la realidad social de <span>escuelas rurales</span></h1>
         <p>Buscamos <span>acortar la desigualdad</span> de las infancias en las comunidades rurales en nuestro país.</p>
     </div>
     <div class="center"><CTA /></div>
-</header>
+</section>
 <style>
-    header {
+    section {
         display: flex;
         flex-direction: column;
         gap: 2.5rem;
         padding-block: 2rem;
+        position: relative;
+        z-index: 5;
     }
     
 	h1 {
