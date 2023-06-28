@@ -1,5 +1,6 @@
 ---
 import Logo from '../../assets/logo.png'
+import Misc from '../../assets/misc-footer.svg'
 ---
 
 <section class="pd__inline">
@@ -8,24 +9,24 @@ import Logo from '../../assets/logo.png'
 
     <p><span>Grupo Tateti</span> es un un grupo de intervención comunitaria, que desde el 2014 busca <span>acompañar de manera integral las trayectorias socioeducativas de comunidades rurales.</span></p>
     <ul>
-        <li><a href="mailto:contacto@grupotateti.com" target="_blank"><img src="/mail.svg" alt='Logo de un sobre para indicar el contacto de mail de Grupo Tateti'/>grupo_tateti</a></li>
-        <li><a href="https://wa.me/5491164067977" target="_blank"><img src="/wp.svg" alt='Logo de whatsapp para abrir el chat con Grupo Tateti'/>Whatsapp</a></li>
-        <li><a href="https://www.youtube.com/@grupotateti703/featured" target="_blank"><img src="youtube.svg" alt='Logo de youtube para ir al canal de Grupo Tateti'/>Youtube</a></li>
-        <li><a href="https://www.linkedin.com/company/grupo-tateti/" target="_blank"><img src="linkedin.svg" alt='Logo de Linkedin para ir al perfil de Grupo Tateti'/>Linkedin</a></li>
-        <li><a href="https://www.instagram.com/grupo_tateti/" target="_blank"><img src="instagram.svg" alt='Logo de instagram para ir al perfil de Grupo Tateti'/>grupo_tateti</a></li>
+        <li><a href="mailto:contacto@grupotateti.com" target="_blank"><img src="/mail.svg" alt='Logo de un sobre para indicar el contacto de mail de Grupo Tateti'/>grupo_tateti</a><img class="misc" src={Misc} alt="miscellaneous backgroud for icon"></li>
+        <li><a href="https://wa.me/5491164067977" target="_blank"><img src="/wp.svg" alt='Logo de whatsapp para abrir el chat con Grupo Tateti'/>Whatsapp</a><img class="misc" src={Misc} alt="miscellaneous backgroud for icon"></li>
+        <li><a href="https://www.youtube.com/@grupotateti703/featured" target="_blank"><img src="youtube.svg" alt='Logo de youtube para ir al canal de Grupo Tateti'/>Youtube</a><img class="misc" src={Misc} alt="miscellaneous backgroud for icon"></li>
+        <li><a href="https://www.linkedin.com/company/grupo-tateti/" target="_blank"><img src="linkedin.svg" alt='Logo de Linkedin para ir al perfil de Grupo Tateti'/>Linkedin</a><img class="misc" src={Misc} alt="miscellaneous backgroud for icon"></li>
+        <li><a href="https://www.instagram.com/grupo_tateti/" target="_blank"><img src="instagram.svg" alt='Logo de instagram para ir al perfil de Grupo Tateti'/>grupo_tateti</a><img class="misc" src={Misc} alt="miscellaneous backgroud for icon"></li>
     </ul>
 </section>
 <style>
     section {
         padding-bottom: 4rem;
-        background-color: var(--purple-200);
+        background-color: var(--purple-light);
         position: relative;
         overflow-x: hidden;
     }
 
     section::before {
         content: '';
-        background-color: var(--yellow-300);
+        background-color: var(--yellow-primary);
         left: 0;
         height: 100%;
         width: 100%;
@@ -68,13 +69,23 @@ import Logo from '../../assets/logo.png'
         z-index: 5;
     }
 
+    li {
+        position: relative;
+    }
+
+    .misc {
+        position: absolute;
+        top: -.5rem;
+        left: .5rem;
+    }
+
     a {
         display: flex;
-        gap: 1rem;
+        gap: 1.5rem;
         align-items: center;
 
         font-family: "Poppins", sans-serif;
-        color: var(--purple-500);
+        color: var(--purple-dark);
         text-decoration: none;
         position: relative;
         z-index: 5;

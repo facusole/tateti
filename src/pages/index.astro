@@ -17,7 +17,7 @@ import Wip from "../components/WIP/Wip.astro";
 		<Navbar />
 		<Header />
 	</header>
-	<main>
+	<main class="section__margin">
 		<InfoBanner />
 		<WorkInfo />
 		<MainCTA />
@@ -30,13 +30,13 @@ import Wip from "../components/WIP/Wip.astro";
 
 <style>
 	header {
-		background-color: var(--purple-200);
+		background-color: var(--purple-light);
 		overflow: hidden;
 		position: relative;
 	}
 
 	.bubble__form {
-		background: var(--purple-300);
+		background: var(--purple-primary);
 		position: absolute;
 		top: 0;
 		z-index: 0;
@@ -47,13 +47,6 @@ import Wip from "../components/WIP/Wip.astro";
 	}
 
 	main {
-		background-color: var(--purple-200);
-		padding-block: 2rem;
-	}
-
-	@media (min-width: 450px) {
-		html {
-			overflow: hidden;
-		}
+		background-color: var(--purple-light);
 	}
 </style>
