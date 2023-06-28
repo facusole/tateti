@@ -1,21 +1,87 @@
 ---
 import CTA from "../CTA.astro";
-
+import Box from '../../assets/box-icon.svg'
+import Truck from '../../assets/truck.svg'
+import House from '../../assets/basic-house.svg'
 ---
 
 <section class="pd__inline section__margin">
+    <div class="bubble__form"></div>
     <h2>Creemos que el acceso a una educación digna es un derecho fundamental.</h2>
     <CTA />
+    <ul>
+        <li>
+            <img src={Box} alt="">
+            <h4>Envio de encomiendas</h4>
+            <p>Contienen alimentos, elementos de higiene y salud, útiles escolares, entre otros.</p>
+        </li>
+        <li>
+            <img src={Truck} alt="">
+            <h4>Viajes</h4>
+            <p>Visitamos las escuelas para conocer el territorio y entender su realidad social.</p>
+        </li>
+        <li>
+            <img src={House} alt="">
+            <h4>Actividades lúdicas</h4>
+            <p>Promovemos las actividades recreativas y artísticas desde un enfoque basado en el juego.</p>
+        </li>
+    </ul>
 </section>
 <style>
+
     section {
         text-align: center;
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
     }
+	.bubble__form {
+		background: var(--purple-primary);
+		position: absolute;
+		top: 0;
+        left: 0;
+		z-index: -1;
+		border-radius: 50%;
+		width: 100%;
+		height: 100%;
+		transform: scaleX(3);
+	}
+
+    :is(h2, ul) {
+        z-index: 5;
+    }
+    
 
     h2 {
         font-family: "Amatic SC", serif;
 		font-weight: 700;
         font-size: 3rem;
         margin-bottom: 2rem;
+        color: var(--purple-ultra-dark);
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        text-align: left;
+        font-family: 'Poppins', sans-serif;
+        padding-top: 5rem;
+    }
+
+    h4 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--purple-ultra-dark);
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    ul > li {
+        margin-block: 2rem;
+    }
+    ul > li > * {
+        margin-block: 1rem;
     }
 </style>
