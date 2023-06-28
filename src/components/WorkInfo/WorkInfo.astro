@@ -2,12 +2,21 @@
 import children1 from '../../assets/children-1.webp'
 import children2 from '../../assets/children-2.webp'
 import children3 from '../../assets/children-3.webp'
+import Gender from '../../assets/gender.svg'
+import Box from '../../assets/box-yellow-bg.svg'
+import Water from '../../assets/agua-potable.svg'
+import Misc from '../../assets/misc-work.svg'
 
 ---
 
 <section class="pd__inline section__margin">
     <h2>Trabajamos en busca de la equidad social</h2>
     <p>Abordamos temáticas en relación con la <span>alimentación, salud, infraestructura, acceso al agua potable y perspectiva de género.</span></p>
+    <div>
+        <article class="icons"><img class="icon" src={Water} alt=""><span>Agua potable</span></article>
+        <article class="icons"><img class="icon" src={Box} alt=""><span>Infraestructura</span></article>
+        <article class="icons"><img class="icon" src={Gender} alt=""><span>Perspectiva de genero</span></article>
+    </div>
     <div>
         <article><img src={children1} alt=""></article>
         <article><img src={children2} alt=""></article>
@@ -21,6 +30,7 @@ import children3 from '../../assets/children-3.webp'
 		font-weight: 700;
         font-size: 3rem;
         margin-bottom: 2rem;
+        color: var(--purple-ultra-dark);
     }
 
     p {
@@ -37,6 +47,34 @@ import children3 from '../../assets/children-3.webp'
         display: flex;
         flex-direction: column;
         gap: 2rem;
+        padding-block: 2rem;
+    }
+
+    div .icons {
+        font-family: "Amatic SC", serif;
+		font-weight: 700;
+        font-size: 2.5rem;
+        color: var(--purple-dark);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: var(--white);
+        max-width: 15rem;
+        padding: 2rem;
+        border-radius: 82% 50% 75% 54% / 76% 61% 56% 43%;
+    }
+
+    div .icons span {
+       text-align: center;
+    }
+
+    .icon {
+        width: 4rem;
+        align-self: center;
+    }
+
+    article:nth-child(odd) {
+        align-self: flex-start;
     }
 
     article:nth-child(even) {
