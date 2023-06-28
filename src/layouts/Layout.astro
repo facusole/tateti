@@ -24,13 +24,13 @@ const { title } = Astro.props;
 		--black: hsl(252, 6%, 15%);
 		--white: hsl(0, 0%, 100%);
 		
-		--yellow-300: hsl(51, 100%, 91%);
+		--yellow-primary: hsl(51, 100%, 91%);
 
-		--purple-100: hsl(281, 100%, 98%);
-		--purple-200: hsl(282, 100%, 95%);
-		--purple-300: hsl(281, 54%, 83%);
-		--purple-500: hsl(281, 67%, 33%);
-		--purple-700: hsl(281, 49%, 24%);	// main purple for texts
+		--purple-light: hsl(281, 100%, 97%);
+		--purple-primary: hsl(281, 100%, 95%);
+		--purple-dark: hsl(281, 67%, 33%);
+		--purple-ultra-dark: hsl(281, 49%, 24%);	// main purple for texts
+
 	}
 
 	/*
@@ -89,6 +89,10 @@ p, h1, h2, h3, h4, h5, h6 {
 /* Utility classes */
 .pd__inline {
 	padding-inline: 1.25rem;
+}
+
+.section__margin {
+	padding-block: 5rem;
 }
 
 .center {
