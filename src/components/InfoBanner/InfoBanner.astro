@@ -1,29 +1,34 @@
 ---
 import Stats from "../Stats.astro";
+import House1 from '../../assets/basic-house.svg';
+import House2 from '../../assets/house.svg';
+import Truck from '../../assets/truck.svg';
+import Box from '../../assets/box-icon.svg';
+
 ---
 
 <section>
     <article>
-        <div class="box"></div>
+        <img src={Box} alt="icon that represents the stat below, in this case it's a box">
         <Stats stat={"+230"} statName={"Encomiendas"} />
     </article>
     <article>
-        <div class="box"></div>
+        <img src={Truck} alt="icon that represents the stat below, in this case it's a truck">
         <Stats stat={"+30"} statName={"Envios"} />
     </article>
     <article>
-        <div class="box"></div>
+        <img src={House2} alt="icon that represents the stat below, in this case it's a house filled with boxes">
         <Stats stat={"+12"} statName={"Viajes"} />
     </article>
     <article>
-        <div class="box"></div>
-        <Stats stat={"+3"} statName={"Escuelas"} />
+        <img src={House1} alt="icon that represents the stat below, in this case it's a building that represents a school">
+        <Stats stat={"4"} statName={"Escuelas"} />
     </article>
 </section>
 
 <style>
     section {
-        background-color: var(--yellow-300);
+        background-color: var(--yellow-primary);
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 5rem;
@@ -31,7 +36,7 @@ import Stats from "../Stats.astro";
         overflow-x: scroll;
         scrollbar-width: 0;
 
-        border: 1px solid var(--purple-700);
+        border: 1px solid var(--purple-ultra-dark);
         border-radius: 1rem;
 
         margin-inline: 1rem;
