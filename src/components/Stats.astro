@@ -1,6 +1,6 @@
 ---
-const {stat} = Astro.props
-const {statName} = Astro.props
+const { stat } = Astro.props;
+const { statName } = Astro.props;
 ---
 
 <div>
@@ -25,5 +25,16 @@ const {statName} = Astro.props
 		font-weight: 400;
 		color: var(--purple-ultra-dark);
 		text-transform: lowercase;
+		text-align: center;
+	}
+
+	@media (min-width: 768px) {
+		p {
+			font-size: 1.75rem;
+		}
+
+		h3 {
+			font-size: 1rem;
+		}
 	}
 </style>
