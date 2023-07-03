@@ -1,19 +1,87 @@
 ---
-import Logo from '../../assets/logo.png'
-import Misc from '../../assets/misc-footer.svg'
+import Logo from "../../assets/logo.png";
+import Misc from "../../assets/misc-footer.svg";
 ---
 
 <section class="pd__inline">
     <div class="bubble__form"></div>
-    <img class="logo" src={Logo} alt="Logo de la asociación civil Grupo Tateti">
+    <img
+        class="logo"
+        src={Logo}
+        alt="Logo de la asociación civil Grupo Tateti"
+    />
 
-    <p><span>Grupo Tateti</span> es una Asociación Civil que <span>acompaña de manera integral las trayectorias socioeducativas de infancias que viven y estudian en comunidades rurales.</span></p>
+    <p>
+        <span>Grupo Tateti</span> es una Asociación Civil que <span
+            >acompaña de manera integral las trayectorias socioeducativas de
+            infancias que viven y estudian en comunidades rurales.</span
+        >
+    </p>
     <ul>
-        <li><a href="mailto:contacto@grupotateti.com" target="_blank"><img src="/mail.svg" alt='Logo de un sobre para indicar el contacto de mail de Grupo Tateti'/>grupo_tateti</a><img class="misc" src={Misc} alt="miscellaneous backgroud for icon"></li>
-        <li><a href="https://wa.me/5491164067977" target="_blank"><img src="/wp.svg" alt='Logo de whatsapp para abrir el chat con Grupo Tateti'/>Whatsapp</a><img class="misc" src={Misc} alt="miscellaneous backgroud for icon"></li>
-        <li><a href="https://www.youtube.com/@grupotateti703/featured" target="_blank"><img src="youtube.svg" alt='Logo de youtube para ir al canal de Grupo Tateti'/>Youtube</a><img class="misc" src={Misc} alt="miscellaneous backgroud for icon"></li>
-        <li><a href="https://www.linkedin.com/company/grupo-tateti/" target="_blank"><img src="linkedin.svg" alt='Logo de Linkedin para ir al perfil de Grupo Tateti'/>Linkedin</a><img class="misc" src={Misc} alt="miscellaneous backgroud for icon"></li>
-        <li><a href="https://www.instagram.com/grupo_tateti/" target="_blank"><img src="instagram.svg" alt='Logo de instagram para ir al perfil de Grupo Tateti'/>grupo_tateti</a><img class="misc" src={Misc} alt="miscellaneous backgroud for icon"></li>
+        <li>
+            <a href="mailto:contacto@grupotateti.com" target="_blank"
+                ><img
+                    src="/mail.svg"
+                    alt="Logo de un sobre para indicar el contacto de mail de Grupo Tateti"
+                />grupo_tateti</a
+            ><img
+                class="misc"
+                src={Misc}
+                alt="miscellaneous backgroud for icon"
+            />
+        </li>
+        <li>
+            <a href="https://wa.me/5491164067977" target="_blank"
+                ><img
+                    src="/wp.svg"
+                    alt="Logo de whatsapp para abrir el chat con Grupo Tateti"
+                />Whatsapp</a
+            ><img
+                class="misc"
+                src={Misc}
+                alt="miscellaneous backgroud for icon"
+            />
+        </li>
+        <li>
+            <a
+                href="https://www.youtube.com/@grupotateti703/featured"
+                target="_blank"
+                ><img
+                    src="youtube.svg"
+                    alt="Logo de youtube para ir al canal de Grupo Tateti"
+                />Youtube</a
+            ><img
+                class="misc"
+                src={Misc}
+                alt="miscellaneous backgroud for icon"
+            />
+        </li>
+        <li>
+            <a
+                href="https://www.linkedin.com/company/grupo-tateti/"
+                target="_blank"
+                ><img
+                    src="linkedin.svg"
+                    alt="Logo de Linkedin para ir al perfil de Grupo Tateti"
+                />Linkedin</a
+            ><img
+                class="misc"
+                src={Misc}
+                alt="miscellaneous backgroud for icon"
+            />
+        </li>
+        <li>
+            <a href="https://www.instagram.com/grupo_tateti/" target="_blank"
+                ><img
+                    src="instagram.svg"
+                    alt="Logo de instagram para ir al perfil de Grupo Tateti"
+                />grupo_tateti</a
+            ><img
+                class="misc"
+                src={Misc}
+                alt="miscellaneous backgroud for icon"
+            />
+        </li>
     </ul>
 </section>
 <style>
@@ -25,7 +93,7 @@ import Misc from '../../assets/misc-footer.svg'
     }
 
     section::before {
-        content: '';
+        content: "";
         background-color: var(--yellow-primary);
         left: 0;
         height: 100%;
@@ -75,8 +143,8 @@ import Misc from '../../assets/misc-footer.svg'
 
     .misc {
         position: absolute;
-        top: -.5rem;
-        left: .5rem;
+        top: -0.5rem;
+        left: 0.5rem;
     }
 
     a {
@@ -89,5 +157,22 @@ import Misc from '../../assets/misc-footer.svg'
         text-decoration: none;
         position: relative;
         z-index: 5;
+    }
+
+    @media (min-width: 768px) {
+        p {
+            text-align: center;
+            margin-inline: auto;
+        }
+
+        ul {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            place-items: center;
+            text-align: center;
+        }
+
+        li:nth-child(n + 4) {
+            margin-left: 6rem;
+        }
     }
 </style>
