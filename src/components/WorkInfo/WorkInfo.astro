@@ -1,31 +1,44 @@
 ---
-import children1 from '../../assets/children-1.webp'
-import children2 from '../../assets/children-2.webp'
-import children3 from '../../assets/children-3.webp'
-import Gender from '../../assets/gender.svg'
-import Box from '../../assets/box-yellow-bg.svg'
-import Water from '../../assets/agua-potable.svg'
+import children1 from "../../assets/children-1.webp";
+import children2 from "../../assets/children-2.webp";
+import children3 from "../../assets/children-3.webp";
+import Gender from "../../assets/gender.svg";
+import Box from "../../assets/box-yellow-bg.svg";
+import Water from "../../assets/agua-potable.svg";
 ---
 
 <section class="pd__inline section__margin">
     <h2>Trabajamos en busca de la equidad social</h2>
-    <p>A través de los programas de <span>Salud y Alimentación, Educación, Inserción laboral e Infraestructura.</span></p>
+    <p>
+        A través de los programas de <span
+            >Salud y Alimentación, Educación, Inserción laboral e
+            Infraestructura.</span
+        >
+    </p>
     <div>
-        <article class="icons"><img class="icon" src={Water} alt=""><span>Agua potable</span></article>
-        <article class="icons"><img class="icon" src={Box} alt=""><span>Infraestructura</span></article>
-        <article class="icons"><img class="icon" src={Gender} alt=""><span>Perspectiva de genero</span></article>
+        <article class="icons">
+            <img class="icon" src={Water} alt="" /><span>Agua potable</span>
+        </article>
+        <article class="icons">
+            <img class="icon" src={Box} alt="" /><span>Infraestructura</span>
+        </article>
+        <article class="icons">
+            <img class="icon" src={Gender} alt="" /><span
+                >Perspectiva de genero</span
+            >
+        </article>
     </div>
     <div>
-        <article><img src={children1} alt=""></article>
-        <article><img src={children2} alt=""></article>
-        <article><img src={children3} alt=""></article>
+        <article><img src={children1} alt="" /></article>
+        <article><img src={children2} alt="" /></article>
+        <article><img src={children3} alt="" /></article>
     </div>
 </section>
 
 <style>
     h2 {
         font-family: "Amatic SC", serif;
-		font-weight: 700;
+        font-weight: 700;
         font-size: 3rem;
         margin-bottom: 2rem;
         color: var(--purple-ultra-dark);
@@ -50,7 +63,7 @@ import Water from '../../assets/agua-potable.svg'
 
     div .icons {
         font-family: "Amatic SC", serif;
-		font-weight: 700;
+        font-weight: 700;
         font-size: 2.5rem;
         color: var(--purple-dark);
         display: flex;
@@ -63,7 +76,7 @@ import Water from '../../assets/agua-potable.svg'
     }
 
     div .icons span {
-       text-align: center;
+        text-align: center;
     }
 
     .icon {
@@ -78,4 +91,22 @@ import Water from '../../assets/agua-potable.svg'
     article:nth-child(even) {
         align-self: flex-end;
     }
+
+    @media (min-width: 768px) {
+        h2 {
+            font-size: 4rem;
+            text-align: center;
+            margin-inline: auto;
+            max-width: 25ch;
+        }
+
+        p {
+            font-family: "Poppins", sans-serif;
+            font-size: 1.5rem;
+            margin-inline: auto;
+        }
+        div {
+            max-width: 34rem;
+            margin: 3rem auto;
+        }
 </style>
