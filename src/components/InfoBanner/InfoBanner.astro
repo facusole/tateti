@@ -1,27 +1,38 @@
 ---
 import Stats from "../Stats.astro";
-import House1 from '../../assets/basic-house.svg';
-import House2 from '../../assets/house.svg';
-import Truck from '../../assets/truck.svg';
-import Box from '../../assets/box-icon.svg';
-
+import House1 from "../../assets/basic-house.svg";
+import House2 from "../../assets/house.svg";
+import Truck from "../../assets/truck.svg";
+import Box from "../../assets/box-icon.svg";
 ---
 
 <section>
     <article>
-        <img src={Box} alt="icon that represents the stat below, in this case it's a box">
+        <img
+            src={Box}
+            alt="icon that represents the stat below, in this case it's a box"
+        />
         <Stats stat={"+230"} statName={"Encomiendas"} />
     </article>
     <article>
-        <img src={Truck} alt="icon that represents the stat below, in this case it's a truck">
+        <img
+            src={Truck}
+            alt="icon that represents the stat below, in this case it's a truck"
+        />
         <Stats stat={"+30"} statName={"Envios"} />
     </article>
     <article>
-        <img src={House2} alt="icon that represents the stat below, in this case it's a house filled with boxes">
+        <img
+            src={House2}
+            alt="icon that represents the stat below, in this case it's a house filled with boxes"
+        />
         <Stats stat={"+12"} statName={"Viajes"} />
     </article>
     <article>
-        <img src={House1} alt="icon that represents the stat below, in this case it's a building that represents a school">
+        <img
+            src={House1}
+            alt="icon that represents the stat below, in this case it's a building that represents a school"
+        />
         <Stats stat={"4"} statName={"Escuelas"} />
     </article>
 </section>
@@ -58,5 +69,18 @@ import Box from '../../assets/box-icon.svg';
         width: 40px;
         height: 40px;
         border: 1px solid black;
+    }
+
+    @media (min-width: 768px) {
+        section {
+            margin-inline: 3rem;
+            padding: 1rem;
+            gap: 3rem;
+        }
+
+        img {
+            width: 4rem;
+            aspect-ratio: 1;
+        }
     }
 </style>
