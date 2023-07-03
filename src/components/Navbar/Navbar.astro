@@ -1,10 +1,14 @@
 ---
 // Aca van los imports
-import Logo from '../../assets/logo.png'
+import Logo from "../../assets/logo.png";
+import CTA from "../CTA.astro";
 ---
 
 <nav class="pd__inline">
-    <img src={Logo} alt="Logo de la asociación civil Grupo Tateti">
+    <img src={Logo} alt="Logo de la asociación civil Grupo Tateti" />
+    <span>
+        <CTA />
+    </span>
 </nav>
 <style>
     nav {
@@ -19,5 +23,19 @@ import Logo from '../../assets/logo.png'
     img {
         width: 5rem;
         height: 4rem;
+    }
+
+    span {
+        display: none;
+    }
+
+    @media (min-width: 768px) {
+        .pd__inline {
+            padding-inline: 3rem;
+        }
+
+        span {
+            display: block;
+        }
     }
 </style>
