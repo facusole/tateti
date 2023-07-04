@@ -8,30 +8,35 @@ import Water from "../../assets/agua-potable.svg";
 ---
 
 <section class="pd__inline section__margin">
-    <h2>Trabajamos en busca de la equidad social</h2>
-    <p>
-        A través de los programas de <span
-            >Salud y Alimentación, Educación, Inserción laboral e
-            Infraestructura.</span
-        >
-    </p>
-    <div>
-        <article class="icons">
-            <img class="icon" src={Water} alt="" /><span>Agua potable</span>
-        </article>
-        <article class="icons">
-            <img class="icon" src={Box} alt="" /><span>Infraestructura</span>
-        </article>
-        <article class="icons">
-            <img class="icon" src={Gender} alt="" /><span
-                >Perspectiva de genero</span
-            >
-        </article>
+    <div class="wrapper">
+        <div class="text">
+            <h2>Trabajamos en busca de la equidad social</h2>
+            <p>
+                A través de los programas de <span
+                    >Salud y Alimentación, Educación, Inserción laboral e
+                    Infraestructura.</span
+                >
+            </p>
+        </div>
+        <div class="imgs">
+            <article class="icons">
+                <img class="icon" src={Water} alt="" /><span>Agua potable</span>
+            </article>
+            <article class="icons">
+                <img class="icon" src={Box} alt="" /><span>Infraestructura</span
+                >
+            </article>
+            <article class="icons">
+                <img class="icon" src={Gender} alt="" /><span
+                    >Perspectiva de genero</span
+                >
+            </article>
+        </div>
     </div>
-    <div>
-        <article><img src={children1} alt="" /></article>
-        <article><img src={children2} alt="" /></article>
-        <article><img src={children3} alt="" /></article>
+    <div class="imgs children">
+        <article class="child__img"><img src={children1} alt="" /></article>
+        <article class="child__img"><img src={children2} alt="" /></article>
+        <article class="child__img"><img src={children3} alt="" /></article>
     </div>
 </section>
 
@@ -54,14 +59,14 @@ import Water from "../../assets/agua-potable.svg";
         font-weight: 700;
     }
 
-    div {
+    .imgs {
         display: flex;
         flex-direction: column;
         gap: 2rem;
         padding-block: 2rem;
     }
 
-    div .icons {
+    .imgs .icons {
         font-family: "Amatic SC", serif;
         font-weight: 700;
         font-size: 2.5rem;
@@ -75,7 +80,7 @@ import Water from "../../assets/agua-potable.svg";
         border-radius: 82% 50% 75% 54% / 76% 61% 56% 43%;
     }
 
-    div .icons span {
+    .imgs .icons span {
         text-align: center;
     }
 
@@ -84,11 +89,11 @@ import Water from "../../assets/agua-potable.svg";
         align-self: center;
     }
 
-    article:nth-child(odd) {
+    :is(.icons:nth-child(odd), .child__img:nth-child(odd)) {
         align-self: flex-start;
     }
 
-    article:nth-child(even) {
+    :is(.icons:nth-child(even), .child__img:nth-child(even)) {
         align-self: flex-end;
     }
 
@@ -101,13 +106,54 @@ import Water from "../../assets/agua-potable.svg";
         }
 
         p {
-            font-family: "Poppins", sans-serif;
             font-size: 1.5rem;
             margin-inline: auto;
         }
-        div {
+        .imgs {
             max-width: 34rem;
             margin: 3rem auto;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .wrapper {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+        }
+
+        .wrapper .text {
+            text-align: left;
+        }
+
+        h2 {
+            font-size: 5.25rem;
+            text-align: left;
+            max-width: 25ch;
+        }
+
+        p {
+            margin: 0;
+            line-height: 1.8;
+            font-size: 1.5rem;
+        }
+        .imgs {
+            flex-grow: 999;
+            max-width: 34rem;
+        }
+
+        .children {
+            display: flex;
+            flex-direction: row;
+            max-width: fit-content;
+            align-items: center;
+            justify-content: space-between;
+            gap: 6rem;
+        }
+
+        .child__img:nth-child(odd),
+        .child__img:nth-child(even) {
+            align-self: auto;
         }
     }
 </style>
