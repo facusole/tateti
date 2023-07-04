@@ -175,4 +175,21 @@ import Misc from "../../assets/misc-footer.svg";
             margin-left: 6rem;
         }
     }
+
+    @media (min-width: 1024px) {
+        p {
+            text-align: center;
+            margin-inline: auto;
+        }
+
+        ul {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            place-items: center;
+            text-align: center;
+        }
+
+        li:nth-child(n + 4) {
+            margin-left: 0;
+        }
+    }
 </style>
