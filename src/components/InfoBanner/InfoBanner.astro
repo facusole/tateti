@@ -6,38 +6,47 @@ import Truck from "../../assets/truck.svg";
 import Box from "../../assets/box-icon.svg";
 ---
 
-<section>
-    <article>
-        <img
-            src={Box}
-            alt="icon that represents the stat below, in this case it's a box"
-        />
-        <Stats stat={"+230"} statName={"Encomiendas"} />
-    </article>
-    <article>
-        <img
-            src={Truck}
-            alt="icon that represents the stat below, in this case it's a truck"
-        />
-        <Stats stat={"+30"} statName={"Envios"} />
-    </article>
-    <article>
-        <img
-            src={House2}
-            alt="icon that represents the stat below, in this case it's a house filled with boxes"
-        />
-        <Stats stat={"+12"} statName={"Viajes"} />
-    </article>
-    <article>
-        <img
-            src={House1}
-            alt="icon that represents the stat below, in this case it's a building that represents a school"
-        />
-        <Stats stat={"4"} statName={"Escuelas"} />
-    </article>
-</section>
+<div class="container">
+    <section>
+        <article>
+            <img
+                src={Box}
+                alt="icon that represents the stat below, in this case it's a box"
+            />
+            <Stats stat={"+230"} statName={"Encomiendas"} />
+        </article>
+        <article>
+            <img
+                src={Truck}
+                alt="icon that represents the stat below, in this case it's a truck"
+            />
+            <Stats stat={"+30"} statName={"Envios"} />
+        </article>
+        <article>
+            <img
+                src={House2}
+                alt="icon that represents the stat below, in this case it's a house filled with boxes"
+            />
+            <Stats stat={"+12"} statName={"Viajes"} />
+        </article>
+        <article>
+            <img
+                src={House1}
+                alt="icon that represents the stat below, in this case it's a building that represents a school"
+            />
+            <Stats stat={"4"} statName={"Escuelas"} />
+        </article>
+    </section>
+    <div class="outside__border"></div>
+</div>
 
 <style>
+    .container {
+        position: relative;
+        margin-inline: 2rem;
+        isolation: isolate;
+    }
+
     section {
         background-color: var(--yellow-primary);
         display: grid;
@@ -47,11 +56,16 @@ import Box from "../../assets/box-icon.svg";
         overflow-x: scroll;
         scrollbar-width: 0;
 
-        border: 1px solid var(--purple-ultra-dark);
-        border-radius: 1rem;
+        border: 5px solid var(--purple-border);
+        border-radius: 2.5rem;
 
         margin-inline: 1rem;
         padding: 1.5rem 3rem;
+        z-index: 10;
+    }
+
+    .outside__border {
+        display: none;
     }
 
     section::-webkit-scrollbar {
@@ -66,10 +80,25 @@ import Box from "../../assets/box-icon.svg";
     }
 
     @media (min-width: 768px) {
+        .container {
+            margin-inline: 3rem;
+        }
         section {
             margin-inline: 3rem;
-            padding: 1rem;
+            padding: 2rem;
             gap: 3rem;
+        }
+
+        .outside__border {
+            display: block;
+            border: 5px solid var(--purple-dark);
+            border-radius: 2.5rem;
+            position: absolute;
+            width: 83%;
+            height: 100%;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%) rotate(2deg);
         }
 
         img {
@@ -78,10 +107,25 @@ import Box from "../../assets/box-icon.svg";
         }
     }
 
-    @media (min-width: 1024px) {
-        section {
+    @media (min-width: 1300px) {
+        .container {
             margin-inline: 20rem;
-            padding: 1rem 3rem;
+        }
+
+        section {
+            padding: 3rem;
+        }
+
+        .outside__border {
+            display: block;
+            border: 5px solid var(--purple-dark);
+            border-radius: 2.5rem;
+            position: absolute;
+            width: 90%;
+            height: 100%;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%) rotate(1deg);
         }
 
         img {
