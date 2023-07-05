@@ -10,7 +10,15 @@ import Water from "../../assets/agua-potable.svg";
 <section class="pd__inline section__margin">
     <div class="wrapper">
         <div class="text">
-            <h2>Trabajamos en busca de la equidad social</h2>
+            <h2>
+                Trabajamos en busca de la <span
+                    >equidad social <img
+                        class="misc"
+                        src="miscellaneas/underline__misc.svg"
+                        alt="miscellanea for the heading, only for decoration"
+                    /></span
+                >
+            </h2>
             <p>
                 A través de los programas de <span
                     >Salud y Alimentación, Educación, Inserción laboral e
@@ -57,6 +65,12 @@ import Water from "../../assets/agua-potable.svg";
 
     span {
         font-weight: 700;
+        position: relative;
+    }
+
+    .misc {
+        display: none;
+        position: absolute;
     }
 
     .imgs {
@@ -105,6 +119,12 @@ import Water from "../../assets/agua-potable.svg";
             max-width: 25ch;
         }
 
+        .misc {
+            display: block;
+            left: 0;
+            bottom: -2rem;
+        }
+
         p {
             font-size: 1.5rem;
             margin-inline: auto;
@@ -120,6 +140,7 @@ import Water from "../../assets/agua-potable.svg";
             display: flex;
             flex-direction: row-reverse;
             align-items: center;
+            gap: 4rem;
         }
 
         .wrapper .text {
@@ -130,6 +151,10 @@ import Water from "../../assets/agua-potable.svg";
             font-size: 5.25rem;
             text-align: left;
             max-width: 25ch;
+        }
+
+        .misc {
+            left: 20%;
         }
 
         p {
