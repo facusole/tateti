@@ -7,6 +7,16 @@ import House from "../../assets/basic-house.svg";
 
 <section class="pd__inline section__margin">
     <div class="bubble__form"></div>
+    <img
+        class="misc dark"
+        src="miscellaneas/dark__misc.svg"
+        alt="miscellanea for the section, only for decoration"
+    />
+    <img
+        class="misc transparent"
+        src="miscellaneas/transparent__misc.svg"
+        alt="miscellanea for the section, only for decoration"
+    />
     <div>
         <h2>
             Creemos que el acceso a una educación digna es un derecho
@@ -61,6 +71,11 @@ import House from "../../assets/basic-house.svg";
         transform: scaleX(3);
     }
 
+    :is(.misc) {
+        position: absolute;
+        display: none;
+    }
+
     :is(h2, ul) {
         z-index: 5;
     }
@@ -109,6 +124,22 @@ import House from "../../assets/basic-house.svg";
         margin-block: 1rem;
     }
     @media (min-width: 768px) {
+        :is(.misc) {
+            display: block;
+        }
+
+        .dark {
+            top: 0;
+            left: -12rem;
+            z-index: -1;
+        }
+
+        .transparent {
+            top: 5rem;
+            right: -17rem;
+            z-index: -1;
+        }
+
         h2 {
             font-size: 4rem;
             text-align: center;
@@ -142,6 +173,16 @@ import House from "../../assets/basic-house.svg";
     @media (min-width: 1024px) {
         .bubble__form {
             transform: scaleX(1.5);
+        }
+
+        .dark {
+            top: 2rem;
+            left: -5rem;
+        }
+
+        .transparent {
+            top: 10rem;
+            right: -5rem;
         }
 
         h2 {
