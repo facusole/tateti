@@ -38,6 +38,12 @@ import Box from "../../assets/box-icon.svg";
         </article>
     </section>
     <div class="outside__border"></div>
+    <img class="misc light" src="miscellaneas/light__misc.svg" alt="" />
+    <img
+        class="misc transparent"
+        src="miscellaneas/transparent__misc.svg"
+        alt=""
+    />
 </div>
 
 <style>
@@ -79,6 +85,21 @@ import Box from "../../assets/box-icon.svg";
         align-items: center;
     }
 
+    :is(.misc) {
+        position: absolute;
+        z-index: -1;
+    }
+
+    .light {
+        width: 7rem;
+        top: 10rem;
+        left: -2rem;
+    }
+
+    .transparent {
+        display: none;
+    }
+
     @media (min-width: 768px) {
         .container {
             margin-inline: 3rem;
@@ -105,6 +126,19 @@ import Box from "../../assets/box-icon.svg";
             width: 4rem;
             aspect-ratio: 1;
         }
+
+        .light {
+            width: 20rem;
+            top: -2.5rem;
+            left: -3rem;
+        }
+
+        .transparent {
+            display: block;
+            width: 15rem;
+            right: -3rem;
+            top: 6rem;
+        }
     }
 
     @media (min-width: 1300px) {
@@ -130,6 +164,19 @@ import Box from "../../assets/box-icon.svg";
 
         img {
             width: 5rem;
+        }
+
+        .light {
+            width: 30rem;
+            top: -5rem;
+            left: -15rem;
+        }
+
+        .transparent {
+            display: block;
+            width: 30rem;
+            right: -15rem;
+            top: -10rem;
         }
     }
 </style>
