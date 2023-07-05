@@ -166,13 +166,9 @@ import Misc from "../../assets/misc-footer.svg";
         }
 
         ul {
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            place-items: center;
-            text-align: center;
-        }
-
-        li:nth-child(n + 4) {
-            margin-left: 6rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
     }
 
@@ -180,16 +176,6 @@ import Misc from "../../assets/misc-footer.svg";
         p {
             text-align: center;
             margin-inline: auto;
-        }
-
-        ul {
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            place-items: center;
-            text-align: center;
-        }
-
-        li:nth-child(n + 4) {
-            margin-left: 0;
         }
     }
 </style>
