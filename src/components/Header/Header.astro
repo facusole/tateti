@@ -6,7 +6,21 @@ import CTA from "../CTA.astro";
 <section class="pd__inline">
     <div>
         <h1>
-            Transformamos la realidad social de <span>escuelas rurales</span>
+            <span
+                >Transformamos<img
+                    class="misc top"
+                    src="miscellaneas/cartoon__misc.svg"
+                    alt=""
+                /></span
+            >
+            <br /> la realidad social de
+            <span>
+                escuelas rurales <img
+                    class="misc underline"
+                    src="miscellaneas/curly__misc.svg"
+                    alt=""
+                /></span
+            >
         </h1>
         <p>
             Nuestra misión es que la <span>igualdad de oportunidades</span> sea una
@@ -27,10 +41,28 @@ import CTA from "../CTA.astro";
 
     h1 {
         font-family: "Amatic SC", serif;
+        max-width: 20ch;
         font-weight: 700;
         font-size: 3rem;
         margin-bottom: 2rem;
         color: var(--purple-ultra-dark);
+    }
+
+    :is(.misc) {
+        position: absolute;
+    }
+
+    .top {
+        top: -12px;
+        right: -2.5rem;
+        width: 4rem;
+        aspect-ratio: 1;
+    }
+
+    .underline {
+        width: 7rem;
+        left: 0;
+        bottom: -1rem;
     }
 
     p {
@@ -41,6 +73,7 @@ import CTA from "../CTA.astro";
 
     span {
         font-weight: 600;
+        position: relative;
     }
 
     @media (min-width: 768px) {
@@ -49,6 +82,10 @@ import CTA from "../CTA.astro";
             font-size: 4rem;
             max-width: 24ch;
             margin-inline: auto;
+        }
+
+        .underline {
+            width: 9rem;
         }
 
         p {
@@ -67,7 +104,17 @@ import CTA from "../CTA.astro";
 
         h1 {
             font-size: 6rem;
-            max-width: 30ch;
+            max-width: 40ch;
+        }
+
+        .top {
+            width: 7rem;
+            top: -1.5rem;
+            right: -4.5rem;
+        }
+
+        .underline {
+            width: 13.125rem;
         }
 
         p {
