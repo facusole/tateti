@@ -1,25 +1,27 @@
 ---
-
 ---
 
-<button>Quiero donar</button>
+<a href="https://mpago.la/1RsGHRX" target="_blank" rel="noopener noreferrer"
+    >Quiero donar</a
+>
 <style>
-    button {
+    a {
         font-family: "Amatic SC", serif;
-		font-weight: 700;
+        font-weight: 700;
         font-size: 2rem;
+        text-decoration: none;
         color: var(--white);
 
         background-color: var(--purple-dark);
-        padding: .5rem 1.5rem;
+        padding: 0.5rem 1.5rem;
         border: transparent;
-        border-radius: .75rem;
+        border-radius: 0.75rem;
         cursor: pointer;
 
-        transition: .3s ease-in;
+        transition: 0.3s ease-in;
     }
 
-    button:is(:focus-within, :hover) {
+    a:is(:focus-within, :hover) {
         background-color: var(--purple-ultra-dark);
         outline: 1px solid var(--purple-dark);
     }
