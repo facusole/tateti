@@ -6,206 +6,206 @@ import House from "../../assets/basic-house.svg";
 ---
 
 <section class="pd__inline section__margin">
-    <div class="bubble__form"></div>
-    <img
-        class="misc dark"
-        src="miscellaneas/dark__misc.svg"
-        alt="miscellanea for the section, only for decoration"
-    />
-    <img
-        class="misc transparent"
-        src="miscellaneas/transparent__misc.svg"
-        alt="miscellanea for the section, only for decoration"
-    />
-    <div>
-        <h2>
-            Creemos que el acceso a una educación digna es un derecho
-            fundamental.
-        </h2>
-        <CTA />
-        <p>Construimos un <span>vínculo con las comunidades</span></p>
-    </div>
-    <ul>
-        <li>
-            <img src={Box} alt="" />
-            <h4>Envio de encomiendas</h4>
-            <p>
-                Contienen alimentos, elementos de higiene y salud, útiles
-                escolares, entre otros.
-            </p>
-        </li>
-        <li>
-            <img src={Truck} alt="" />
-            <h4>Viajes</h4>
-            <p>
-                Visitamos las escuelas para conocer el territorio y entender su
-                realidad social.
-            </p>
-        </li>
-        <li>
-            <img src={House} alt="" />
-            <h4>Actividades lúdicas</h4>
-            <p>
-                Promovemos las actividades recreativas y artísticas desde un
-                enfoque basado en el juego.
-            </p>
-        </li>
-    </ul>
+  <div class="bubble__form"></div>
+  <img
+    class="misc dark"
+    src="miscellaneas/dark__misc.svg"
+    alt="miscellanea for the section, only for decoration"
+  />
+  <img
+    class="misc transparent"
+    src="miscellaneas/transparent__misc.svg"
+    alt="miscellanea for the section, only for decoration"
+  />
+  <div>
+    <h2>
+      Creemos que el acceso a una educación digna es un derecho fundamental.
+    </h2>
+    <CTA />
+    <p>Construimos un <span>vínculo con las comunidades</span></p>
+  </div>
+  <ul>
+    <li>
+      <img src={Box} alt="" />
+      <h4>Envio de encomiendas</h4>
+      <p>
+        Contienen alimentos, elementos de higiene y salud, útiles escolares,
+        entre otros.
+      </p>
+    </li>
+    <li>
+      <img src={Truck} alt="" />
+      <h4>Viajes</h4>
+      <p>
+        Visitamos las escuelas para conocer el territorio y entender su realidad
+        social.
+      </p>
+    </li>
+    <li>
+      <img src={House} alt="" />
+      <h4>Actividades lúdicas</h4>
+      <p>
+        Promovemos las actividades recreativas y artísticas desde un enfoque
+        basado en el juego.
+      </p>
+    </li>
+  </ul>
 </section>
 <style>
-    section {
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-        isolation: isolate;
-    }
-    .bubble__form {
-        background: var(--purple-primary);
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        border-radius: 50%;
-        width: 100%;
-        height: 100%;
-        transform: scaleX(3);
-    }
+  section {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .bubble__form {
+    background: var(--purple-primary);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(3);
+  }
 
+  :is(.misc) {
+    position: absolute;
+    display: none;
+  }
+
+  :is(h2, ul) {
+    z-index: 5;
+  }
+
+  h2 {
+    font-family: "Amatic SC", serif;
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--purple-ultra-dark);
+  }
+
+  div p {
+    font-family: "Poppins", sans-serif;
+    width: 23ch;
+    text-align: center;
+    margin: 2rem auto;
+  }
+
+  p span {
+    font-weight: 700;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+    padding-top: 5rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--purple-ultra-dark);
+  }
+
+  p {
+    font-size: 1rem;
+    color: var(--purple-ultra-dark);
+  }
+
+  ul > li {
+    margin-block: 2rem;
+  }
+  ul > li > * {
+    margin-block: 1rem;
+  }
+  @media (min-width: 768px) {
     :is(.misc) {
-        position: absolute;
-        display: none;
+      display: block;
     }
 
-    :is(h2, ul) {
-        z-index: 5;
+    .dark {
+      top: 0;
+      left: -12rem;
+      z-index: -1;
+    }
+
+    .transparent {
+      top: 5rem;
+      right: -17rem;
+      z-index: -1;
     }
 
     h2 {
-        font-family: "Amatic SC", serif;
-        font-weight: 700;
-        font-size: 3rem;
-        margin-bottom: 2rem;
-        color: var(--purple-ultra-dark);
+      font-size: 4rem;
+      text-align: center;
+      margin-inline: auto;
+      max-width: 25ch;
     }
 
     div p {
-        font-family: "Poppins", sans-serif;
-        width: 23ch;
-        text-align: center;
-        margin: 2rem auto;
-    }
-
-    p span {
-        font-weight: 700;
+      font-size: 1.375rem;
     }
 
     ul {
-        list-style: none;
-        padding: 0;
-        text-align: left;
-        font-family: "Poppins", sans-serif;
-        padding-top: 5rem;
+      padding-top: 1rem;
     }
 
-    h4 {
-        font-size: 1.25rem;
-        font-weight: 600;
-        color: var(--purple-ultra-dark);
+    ul li {
+      text-align: center;
+      max-width: 27ch;
+      margin-inline: auto;
     }
 
-    p {
-        font-size: 1rem;
+    ul li img {
+      margin-inline: auto;
     }
 
-    ul > li {
-        margin-block: 2rem;
+    ul li p {
+      font-size: 1.125rem;
     }
-    ul > li > * {
-        margin-block: 1rem;
-    }
-    @media (min-width: 768px) {
-        :is(.misc) {
-            display: block;
-        }
+  }
 
-        .dark {
-            top: 0;
-            left: -12rem;
-            z-index: -1;
-        }
-
-        .transparent {
-            top: 5rem;
-            right: -17rem;
-            z-index: -1;
-        }
-
-        h2 {
-            font-size: 4rem;
-            text-align: center;
-            margin-inline: auto;
-            max-width: 25ch;
-        }
-
-        div p {
-            font-size: 1.375rem;
-        }
-
-        ul {
-            padding-top: 1rem;
-        }
-
-        ul li {
-            text-align: center;
-            max-width: 27ch;
-            margin-inline: auto;
-        }
-
-        ul li img {
-            margin-inline: auto;
-        }
-
-        ul li p {
-            font-size: 1.125rem;
-        }
+  @media (min-width: 1024px) {
+    .bubble__form {
+      transform: scaleX(1.5);
     }
 
-    @media (min-width: 1024px) {
-        .bubble__form {
-            transform: scaleX(1.5);
-        }
-
-        .dark {
-            top: 2rem;
-            left: -5rem;
-        }
-
-        .transparent {
-            top: 10rem;
-            right: -5rem;
-        }
-
-        h2 {
-            max-width: 35ch;
-        }
-
-        ul {
-            padding-top: 5rem;
-            display: flex;
-            align-items: center;
-        }
-
-        ul li {
-            text-align: center;
-            max-width: 30ch;
-        }
-
-        ul li img {
-            margin-inline: auto;
-        }
-
-        ul li p {
-            font-size: 1.125rem;
-        }
+    .dark {
+      top: 2rem;
+      left: -5rem;
     }
+
+    .transparent {
+      top: 10rem;
+      right: -5rem;
+    }
+
+    h2 {
+      max-width: 35ch;
+    }
+
+    ul {
+      padding-top: 5rem;
+      display: flex;
+      align-items: center;
+    }
+
+    ul li {
+      text-align: center;
+      max-width: 30ch;
+    }
+
+    ul li img {
+      margin-inline: auto;
+    }
+
+    ul li p {
+      font-size: 1.125rem;
+    }
+  }
 </style>
