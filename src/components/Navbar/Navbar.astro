@@ -1,37 +1,41 @@
 ---
 // Aca van los imports
-import Logo from "../../assets/logo.png";
+import Logo from "/GT_logo.webp";
 import CTA from "../CTA.astro";
 ---
 
 <nav class="pd__inline">
-    <img src={Logo} alt="Logo de la asociación civil Grupo Tateti" />
-    <span>
-        <CTA />
-    </span>
+  <img src={Logo} alt="Logo de la asociación civil Grupo Tateti" />
+  <span>
+    <CTA />
+  </span>
 </nav>
 <style>
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-block: 1rem;
-        position: relative;
-        z-index: 5;
-    }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1rem;
+    position: relative;
+    z-index: 5;
+  }
 
+  img {
+    width: 5rem;
+    aspect-ratio: 5/4;
+  }
+
+  span {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
     img {
-        width: 5rem;
-        height: 4rem;
+      width: 7rem;
     }
 
     span {
-        display: none;
+      display: block;
     }
-
-    @media (min-width: 768px) {
-        span {
-            display: block;
-        }
-    }
+  }
 </style>
