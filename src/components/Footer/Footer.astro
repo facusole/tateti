@@ -1,187 +1,159 @@
 ---
-import Logo from "../../assets/logo.png";
+import Logo from "/GT_logo.webp";
 import Misc from "../../assets/misc-footer.svg";
 ---
 
 <section class="pd__inline">
-    <div class="bubble__form"></div>
-    <img
-        class="logo"
-        src={Logo}
-        alt="Logo de la asociación civil Grupo Tateti"
-    />
+  <div class="bubble__form"></div>
+  <img class="logo" src={Logo} alt="Logo de la asociación civil Grupo Tateti" />
 
-    <p>
-        <span>Grupo Tateti</span> es una Asociación Civil que <span
-            >acompaña de manera integral las trayectorias socioeducativas de
-            infancias que viven y estudian en comunidades rurales.</span
-        >
-    </p>
-    <ul>
-        <li>
-            <a href="mailto:contacto@grupotateti.com" target="_blank"
-                ><img
-                    src="/mail.svg"
-                    alt="Logo de un sobre para indicar el contacto de mail de Grupo Tateti"
-                />contacto@grupotateti.com</a
-            ><img
-                class="misc"
-                src={Misc}
-                alt="miscellaneous backgroud for icon"
-            />
-        </li>
-        <li>
-            <a href="https://wa.me/5491164067977" target="_blank"
-                ><img
-                    src="/wp.svg"
-                    alt="Logo de whatsapp para abrir el chat con Grupo Tateti"
-                />Whatsapp</a
-            ><img
-                class="misc"
-                src={Misc}
-                alt="miscellaneous backgroud for icon"
-            />
-        </li>
-        <li>
-            <a
-                href="https://www.youtube.com/@grupotateti703/featured"
-                target="_blank"
-                ><img
-                    src="youtube.svg"
-                    alt="Logo de youtube para ir al canal de Grupo Tateti"
-                />Youtube</a
-            ><img
-                class="misc"
-                src={Misc}
-                alt="miscellaneous backgroud for icon"
-            />
-        </li>
-        <li>
-            <a
-                href="https://www.linkedin.com/company/grupo-tateti/"
-                target="_blank"
-                ><img
-                    src="linkedin.svg"
-                    alt="Logo de Linkedin para ir al perfil de Grupo Tateti"
-                />Linkedin</a
-            ><img
-                class="misc"
-                src={Misc}
-                alt="miscellaneous backgroud for icon"
-            />
-        </li>
-        <li>
-            <a href="https://www.instagram.com/grupo_tateti/" target="_blank"
-                ><img
-                    src="instagram.svg"
-                    alt="Logo de instagram para ir al perfil de Grupo Tateti"
-                />grupo_tateti</a
-            ><img
-                class="misc"
-                src={Misc}
-                alt="miscellaneous backgroud for icon"
-            />
-        </li>
-    </ul>
+  <p>
+    <span>Grupo Tateti</span> es una Asociación Civil que <span
+      >acompaña de manera integral las trayectorias socioeducativas de infancias
+      que viven y estudian en comunidades rurales.</span
+    >
+  </p>
+  <ul>
+    <li>
+      <a href="https://www.instagram.com/grupo_tateti/" target="_blank"
+        ><img
+          src="instagram.svg"
+          alt="Logo de instagram para ir al perfil de Grupo Tateti"
+        />grupo_tateti</a
+      ><img class="misc" src={Misc} alt="miscellaneous backgroud for icon" />
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/company/grupo-tateti/" target="_blank"
+        ><img
+          src="linkedin.svg"
+          alt="Logo de Linkedin para ir al perfil de Grupo Tateti"
+        />Linkedin</a
+      ><img class="misc" src={Misc} alt="miscellaneous backgroud for icon" />
+    </li>
+    <li>
+      <a href="https://wa.me/5491164067977" target="_blank"
+        ><img
+          src="/wp.svg"
+          alt="Logo de whatsapp para abrir el chat con Grupo Tateti"
+        />Whatsapp</a
+      ><img class="misc" src={Misc} alt="miscellaneous backgroud for icon" />
+    </li>
+    <li>
+      <a href="https://www.youtube.com/@grupotateti703/featured" target="_blank"
+        ><img
+          src="youtube.svg"
+          alt="Logo de youtube para ir al canal de Grupo Tateti"
+        />Youtube</a
+      ><img class="misc" src={Misc} alt="miscellaneous backgroud for icon" />
+    </li>
+    <li>
+      <a href="mailto:contacto@grupotateti.com" target="_blank"
+        ><img
+          src="/mail.svg"
+          alt="Logo de un sobre para indicar el contacto de mail de Grupo Tateti"
+        />contacto@grupotateti.com</a
+      ><img class="misc" src={Misc} alt="miscellaneous backgroud for icon" />
+    </li>
+  </ul>
 </section>
 <style>
-    section {
-        padding-bottom: 4rem;
-        background-color: var(--purple-light);
-        position: relative;
-        overflow-x: hidden;
-    }
+  section {
+    padding-bottom: 4rem;
+    background-color: var(--purple-light);
+    position: relative;
+    overflow-x: hidden;
+  }
 
-    section::before {
-        content: "";
-        background-color: var(--yellow-primary);
-        left: 0;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        border-radius: 50% 50% 0 0;
-        transform: scaleX(1.5);
-    }
+  section::before {
+    content: "";
+    background-color: var(--yellow-primary);
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 50% 50% 0 0;
+    transform: scaleX(1.5);
+  }
 
-    .logo {
-        margin-inline: auto;
-        margin-top: 3rem;
-        width: 5rem;
-        height: 4rem;
-        position: relative;
-        z-index: 5;
-    }
+  .logo {
+    margin-inline: auto;
+    margin-top: 3rem;
+    width: 5rem;
+    height: 4rem;
+    position: relative;
+    z-index: 5;
+  }
 
+  p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    max-width: 30ch;
+    margin-block: 3rem;
+    position: relative;
+    z-index: 5;
+  }
+
+  span {
+    font-weight: 700;
+    position: relative;
+    z-index: 5;
+  }
+
+  ul {
+    padding: 2rem 0 0 0;
+    list-style: none;
+
+    display: grid;
+    gap: 2rem;
+    position: relative;
+    z-index: 5;
+  }
+
+  li {
+    position: relative;
+  }
+
+  .misc {
+    position: absolute;
+    top: -0.5rem;
+    left: 0.5rem;
+  }
+
+  a {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+
+    font-family: "Poppins", sans-serif;
+    color: var(--purple-dark);
+    text-decoration: none;
+    position: relative;
+    z-index: 5;
+  }
+
+  @media (min-width: 768px) {
     p {
-        font-family: "Poppins", sans-serif;
-        font-size: 1rem;
-        max-width: 30ch;
-        margin-block: 3rem;
-        position: relative;
-        z-index: 5;
-    }
-
-    span {
-        font-weight: 700;
-        position: relative;
-        z-index: 5;
+      text-align: center;
+      margin-inline: auto;
     }
 
     ul {
-        padding: 2rem 0 0 0;
-        list-style: none;
-
-        display: grid;
-        gap: 2rem;
-        position: relative;
-        z-index: 5;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
     }
+  }
 
-    li {
-        position: relative;
+  @media (min-width: 1024px) {
+    .logo {
+      width: 8rem;
+      height: 6rem;
     }
-
-    .misc {
-        position: absolute;
-        top: -0.5rem;
-        left: 0.5rem;
+    p {
+      text-align: center;
+      margin-inline: auto;
+      max-width: 40ch;
+      font-size: 1.25rem;
     }
-
-    a {
-        display: flex;
-        gap: 1.5rem;
-        align-items: center;
-
-        font-family: "Poppins", sans-serif;
-        color: var(--purple-dark);
-        text-decoration: none;
-        position: relative;
-        z-index: 5;
-    }
-
-    @media (min-width: 768px) {
-        p {
-            text-align: center;
-            margin-inline: auto;
-        }
-
-        ul {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-    }
-
-    @media (min-width: 1024px) {
-        .logo {
-            width: 8rem;
-            height: 6rem;
-        }
-        p {
-            text-align: center;
-            margin-inline: auto;
-            max-width: 40ch;
-            font-size: 1.25rem;
-        }
-    }
+  }
 </style>
