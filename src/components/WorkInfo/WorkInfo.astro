@@ -8,178 +8,182 @@ import Water from "../../assets/agua-potable.svg";
 ---
 
 <section class="pd__inline section__margin">
-    <div class="wrapper">
-        <div class="text">
-            <h2>
-                Trabajamos en busca de la <span
-                    >equidad social <img
-                        class="misc"
-                        src="miscellaneas/underline__misc.svg"
-                        alt="miscellanea for the heading, only for decoration"
-                    /></span
-                >
-            </h2>
-            <p>
-                A través de los programas de <span
-                    >Salud y Alimentación, Educación, Inserción laboral e
-                    Infraestructura.</span
-                >
-            </p>
-        </div>
-        <div class="imgs">
-            <article class="icons">
-                <img class="icon" src={Water} alt="" /><span>Agua potable</span>
-            </article>
-            <article class="icons">
-                <img class="icon" src={Box} alt="" /><span>Infraestructura</span
-                >
-            </article>
-            <article class="icons">
-                <img class="icon" src={Gender} alt="" /><span
-                    >Perspectiva de genero</span
-                >
-            </article>
-        </div>
+  <div class="wrapper">
+    <div class="text">
+      <h2>
+        Trabajamos en busca de la <span
+          >equidad social <img
+            class="misc"
+            src="miscellaneas/underline__misc.svg"
+            alt="miscellanea for the heading, only for decoration"
+          /></span
+        >
+      </h2>
+      <p>
+        A través de los programas de <span
+          >Salud y Alimentación, Educación, Inserción laboral e Infraestructura.</span
+        >
+      </p>
     </div>
-    <div class="imgs children">
-        <article class="child__img"><img src={children1} alt="" /></article>
-        <article class="child__img"><img src={children2} alt="" /></article>
-        <article class="child__img"><img src={children3} alt="" /></article>
+    <div class="imgs">
+      <article class="icons">
+        <img class="icon" src={Water} alt="" /><span>Agua potable</span>
+      </article>
+      <article class="icons">
+        <img class="icon" src={Box} alt="" /><span>Infraestructura</span>
+      </article>
+      <article class="icons">
+        <img class="icon" src={Gender} alt="" /><span
+          >Perspectiva de genero</span
+        >
+      </article>
     </div>
+  </div>
+  <div class="imgs children">
+    <article class="child__img"><img src={children1} alt="" /></article>
+    <article class="child__img"><img src={children2} alt="" /></article>
+    <article class="child__img"><img src={children3} alt="" /></article>
+  </div>
 </section>
 
 <style>
+  h2 {
+    font-family: "Amatic SC", serif;
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--purple-ultra-dark);
+  }
+
+  p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    width: 30ch;
+  }
+
+  span {
+    font-weight: 700;
+    position: relative;
+  }
+
+  .misc {
+    display: none;
+    position: absolute;
+  }
+
+  .imgs {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-block: 2rem;
+  }
+
+  .imgs .icons {
+    font-family: "Amatic SC", serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: var(--purple-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--white);
+    max-width: 15rem;
+    padding: 2rem;
+    border-radius: 82% 50% 75% 54% / 76% 61% 56% 43%;
+  }
+
+  .imgs .icons span {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .icon {
+    width: 4rem;
+    align-self: center;
+  }
+
+  :is(.icons:nth-child(odd), .child__img:nth-child(odd)) {
+    align-self: flex-start;
+  }
+
+  :is(.icons:nth-child(even), .child__img:nth-child(even)) {
+    align-self: flex-end;
+  }
+
+  @media (min-width: 768px) {
     h2 {
-        font-family: "Amatic SC", serif;
-        font-weight: 700;
-        font-size: 3rem;
-        margin-bottom: 2rem;
-        color: var(--purple-ultra-dark);
-    }
-
-    p {
-        font-family: "Poppins", sans-serif;
-        font-size: 1rem;
-        width: 30ch;
-    }
-
-    span {
-        font-weight: 700;
-        position: relative;
+      font-size: 4rem;
+      text-align: center;
+      margin-inline: auto;
+      max-width: 25ch;
     }
 
     .misc {
-        display: none;
-        position: absolute;
+      display: block;
+      left: 0;
+      bottom: -2rem;
     }
 
+    p {
+      font-size: 1.25rem;
+      margin-inline: auto;
+      padding-block: 1.5rem;
+    }
     .imgs {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        padding-block: 2rem;
+      max-width: 34rem;
+      margin: 3rem auto;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .wrapper {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      gap: 4rem;
     }
 
-    .imgs .icons {
-        font-family: "Amatic SC", serif;
-        font-weight: 700;
-        font-size: 2.5rem;
-        color: var(--purple-dark);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        background-color: var(--white);
-        max-width: 15rem;
-        padding: 2rem;
-        border-radius: 82% 50% 75% 54% / 76% 61% 56% 43%;
+    .wrapper .text {
+      text-align: left;
     }
 
-    .imgs .icons span {
-        text-align: center;
-        font-size: 2rem;
+    h2 {
+      font-size: 5.25rem;
+      text-align: left;
+      max-width: 25ch;
     }
 
-    .icon {
-        width: 4rem;
-        align-self: center;
+    .misc {
+      left: 20%;
     }
 
-    :is(.icons:nth-child(odd), .child__img:nth-child(odd)) {
-        align-self: flex-start;
+    p {
+      margin: 0;
+      line-height: 1.8;
+      font-size: 1.5rem;
+    }
+    .imgs {
+      flex-grow: 999;
+      max-width: 34rem;
     }
 
-    :is(.icons:nth-child(even), .child__img:nth-child(even)) {
-        align-self: flex-end;
+    .children {
+      display: flex;
+      flex-direction: row;
+      max-width: fit-content;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12rem;
     }
 
-    @media (min-width: 768px) {
-        h2 {
-            font-size: 4rem;
-            text-align: center;
-            margin-inline: auto;
-            max-width: 25ch;
-        }
-
-        .misc {
-            display: block;
-            left: 0;
-            bottom: -2rem;
-        }
-
-        p {
-            font-size: 1.5rem;
-            margin-inline: auto;
-        }
-        .imgs {
-            max-width: 34rem;
-            margin: 3rem auto;
-        }
+    .child__img {
+      width: 20rem;
+      aspect-ratio: 1;
     }
 
-    @media (min-width: 1024px) {
-        .wrapper {
-            display: flex;
-            flex-direction: row-reverse;
-            align-items: center;
-            gap: 4rem;
-        }
-
-        .wrapper .text {
-            text-align: left;
-        }
-
-        h2 {
-            font-size: 5.25rem;
-            text-align: left;
-            max-width: 25ch;
-        }
-
-        .misc {
-            left: 20%;
-        }
-
-        p {
-            margin: 0;
-            line-height: 1.8;
-            font-size: 1.5rem;
-        }
-        .imgs {
-            flex-grow: 999;
-            max-width: 34rem;
-        }
-
-        .children {
-            display: flex;
-            flex-direction: row;
-            max-width: fit-content;
-            align-items: center;
-            justify-content: space-between;
-            gap: 12rem;
-        }
-
-        .child__img:nth-child(odd),
-        .child__img:nth-child(even) {
-            align-self: auto;
-        }
+    .child__img:nth-child(odd),
+    .child__img:nth-child(even) {
+      align-self: auto;
     }
+  }
 </style>
