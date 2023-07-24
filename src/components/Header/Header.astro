@@ -4,124 +4,126 @@ import CTA from "../CTA.astro";
 ---
 
 <section class="pd__inline">
-    <div>
-        <h1>
-            <span
-                >Transformamos<img
-                    class="misc top"
-                    src="miscellaneas/cartoon__misc.svg"
-                    alt="miscellanea for the heading, only for decoration"
-                /></span
-            >
-            <br /> la realidad social de
-            <span>
-                escuelas rurales <img
-                    class="misc underline"
-                    src="miscellaneas/curly__misc.svg"
-                    alt="miscellanea for the heading, only for decoration"
-                /></span
-            >
-        </h1>
-        <p>
-            Nuestra misión es que la <span>igualdad de oportunidades</span> sea una
-            realidad en las comunidades rurales del interior del país
-        </p>
-    </div>
-    <div class="center"><CTA /></div>
+  <div>
+    <h1>
+      <span
+        >Transformamos<img
+          class="misc top"
+          src="miscellaneas/cartoon__misc.svg"
+          alt="miscellanea for the heading, only for decoration"
+        /></span
+      >
+      <br /> la realidad social de
+      <span>
+        escuelas rurales <img
+          class="misc underline"
+          src="miscellaneas/curly__misc.svg"
+          alt="miscellanea for the heading, only for decoration"
+        /></span
+      >
+    </h1>
+    <p>
+      Nuestra misión es que la <span>igualdad de oportunidades</span> sea una realidad
+      en las comunidades rurales del interior del país
+    </p>
+  </div>
+  <div class="center"><CTA /></div>
 </section>
 <style>
-    section {
-        display: flex;
-        flex-direction: column;
-        gap: 2.5rem;
-        padding-block: 2rem;
-        position: relative;
-        z-index: 5;
-    }
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding-block: 2rem;
+    position: relative;
+    z-index: 5;
+  }
 
+  h1 {
+    font-family: "Amatic SC", serif;
+    max-width: 20ch;
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--purple-ultra-dark);
+    line-height: 1.2;
+  }
+
+  :is(.misc) {
+    position: absolute;
+  }
+
+  .top {
+    top: -12px;
+    right: -2.5rem;
+    width: 4rem;
+    aspect-ratio: 1;
+  }
+
+  .underline {
+    width: 7rem;
+    left: 0;
+    bottom: -1rem;
+  }
+
+  p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    max-width: 30ch;
+  }
+
+  span {
+    font-weight: 600;
+    position: relative;
+  }
+
+  @media (min-width: 768px) {
     h1 {
-        font-family: "Amatic SC", serif;
-        max-width: 20ch;
-        font-weight: 700;
-        font-size: 3rem;
-        margin-bottom: 2rem;
-        color: var(--purple-ultra-dark);
-        line-height: 1.2;
-    }
-
-    :is(.misc) {
-        position: absolute;
-    }
-
-    .top {
-        top: -12px;
-        right: -2.5rem;
-        width: 4rem;
-        aspect-ratio: 1;
+      text-align: center;
+      font-size: 4rem;
+      max-width: 24ch;
+      margin-inline: auto;
     }
 
     .underline {
-        width: 7rem;
-        left: 0;
-        bottom: -1rem;
+      width: 9rem;
     }
 
     p {
-        font-family: "Poppins", sans-serif;
-        font-size: 1rem;
-        max-width: 30ch;
+      max-width: 36ch;
+      font-size: 1.25rem;
+      padding-block: 1rem;
+      margin-inline: auto;
+      text-align: center;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    div {
+      display: grid;
+      place-content: center;
+      text-align: center;
     }
 
-    span {
-        font-weight: 600;
-        position: relative;
+    h1 {
+      font-size: 6rem;
+      max-width: 40ch;
     }
 
-    @media (min-width: 768px) {
-        h1 {
-            text-align: center;
-            font-size: 4rem;
-            max-width: 24ch;
-            margin-inline: auto;
-        }
-
-        .underline {
-            width: 9rem;
-        }
-
-        p {
-            max-width: 36ch;
-            margin-inline: auto;
-            text-align: center;
-        }
+    .top {
+      width: 7rem;
+      top: -1.5rem;
+      right: -4.5rem;
     }
 
-    @media (min-width: 1024px) {
-        div {
-            display: grid;
-            place-content: center;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 6rem;
-            max-width: 40ch;
-        }
-
-        .top {
-            width: 7rem;
-            top: -1.5rem;
-            right: -4.5rem;
-        }
-
-        .underline {
-            width: 13.125rem;
-        }
-
-        p {
-            font-size: 1.5rem;
-            max-width: 50ch;
-            line-height: 1.5;
-        }
+    .underline {
+      width: 13.125rem;
     }
+
+    p {
+      font-size: 1.5rem;
+      max-width: 50ch;
+      line-height: 1.5;
+    }
+  }
 </style>
