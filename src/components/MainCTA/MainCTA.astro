@@ -17,13 +17,17 @@ import House from "../../assets/basic-house.svg";
     src="miscellaneas/transparent__misc.svg"
     alt="miscellanea for the section, only for decoration"
   />
-  <div>
+  <article id="donation__links">
     <h2>
       Creemos que el acceso a una educación digna es un derecho fundamental.
     </h2>
-    <CTA />
+    <div>
+      <CTA href={"https://mpago.la/1RsGHRX"} ammount={1000} />
+      <CTA href={"https://mpago.la/1RsGHRX"} ammount={2000} />
+      <CTA href={"https://mpago.la/1RsGHRX"} ammount={3000} />
+    </div>
     <p>Construimos un <span>vínculo con las comunidades</span></p>
-  </div>
+  </article>
   <ul>
     <li>
       <img src={Box} alt="" />
@@ -87,11 +91,17 @@ import House from "../../assets/basic-house.svg";
     color: var(--purple-ultra-dark);
   }
 
-  div p {
+  article p {
     font-family: "Poppins", sans-serif;
     width: 23ch;
     text-align: center;
     margin: 2rem auto;
+  }
+
+  div {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 2rem;
   }
 
   p span {
@@ -147,8 +157,12 @@ import House from "../../assets/basic-house.svg";
       max-width: 25ch;
     }
 
-    div p {
+    article p {
       font-size: 1.375rem;
+    }
+
+    div {
+      flex-direction: row;
     }
 
     ul {

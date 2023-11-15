@@ -1,28 +1,41 @@
 ---
+const { ammount } = Astro.props;
+const { href } = Astro.props;
+const { target } = Astro.props;
+
+let styles = {
+  1000: "background-color:var(--purple-medium);color:var(--purple-ultra-dark)",
+  2000: "background-color:var(--yellow-primary);color:var(--purple-ultra-dark)",
+  3000: "background-color:var(--purple-dark);color:var(--white)",
+};
 ---
 
-<a href="https://mpago.la/1RsGHRX" target="_blank" rel="noopener noreferrer"
-    >Quiero donar</a
+<a
+  href={href}
+  target={target}
+  rel="noopener noreferrer"
+  style={ammount && styles[ammount]}
+  >{!ammount ? "Quiero donar" : `Donar $ ${ammount}`}</a
 >
 <style>
-    a {
-        font-family: "Amatic SC", serif;
-        font-weight: 700;
-        font-size: 2rem;
-        text-decoration: none;
-        color: var(--white);
+  a {
+    font-family: "Amatic SC", serif;
+    font-weight: 700;
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--white);
 
-        background-color: var(--purple-dark);
-        padding: 0.5rem 1.5rem;
-        border: transparent;
-        border-radius: 0.75rem;
-        cursor: pointer;
+    background-color: var(--purple-dark);
+    padding: 0.5rem 1.5rem;
+    border: transparent;
+    border-radius: 0.75rem;
+    cursor: pointer;
 
-        transition: 0.3s ease-in;
-    }
+    transition: 0.3s ease-in;
+  }
 
-    a:is(:focus-within, :hover) {
-        background-color: var(--purple-ultra-dark);
-        outline: 1px solid var(--purple-dark);
-    }
+  a:is(:focus-within, :hover) {
+    background-color: var(--purple-ultra-dark);
+    outline: 1px solid var(--purple-dark);
+  }
 </style>
